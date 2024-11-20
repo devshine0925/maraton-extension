@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Web Scraper to Telegram",
+  "version": "1.0",
+  "permissions": ["activeTab", "scripting", "alarms"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "host_permissions": ["https://*/*"],
+  "content_scripts": [
+    {
+      "matches": ["https://*/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
