@@ -12,3 +12,8 @@ function extractDataFromPage() {
   );
   return { links };
 }
+
+
+function name(params) {
+  return params
+}
